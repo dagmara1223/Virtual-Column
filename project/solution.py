@@ -95,11 +95,15 @@ def add_virtual_column(df: pd.DataFrame, role: str, new_column: str) -> pd.DataF
     return new_df
 
 # Testing by hand 
-# if __name__ == "__main__":
-#     result_col = is_valid_column_name("test")
-    
-#     result_pr = is_valid_role("test1 + tst2")
-#     print(result_pr)
+if __name__ == "__main__":
+    df = pd.DataFrame(
+    [[1,2], [4,5], [10,12]],
+    columns=["label_one", "label_two"]
+    )
+
+    result = add_virtual_column(df, "label_one + label_two", "label_three")
+
+    print(result)
 
 
     
