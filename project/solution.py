@@ -53,7 +53,9 @@ def parse_role(role: str) -> tuple | None:
     
     return left_column, right_column, op
 
-
+'''
+Main execute
+'''
 def add_virtual_column(df: pd.DataFrame, role: str, new_column: str) -> pd.DataFrame:
     # Validation
 
